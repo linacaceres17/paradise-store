@@ -1,0 +1,49 @@
+/* App.css: Estilos específicos de componentes */
+
+.navbar {
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+}
+
+.navbar-brand {
+  color: #ff4081;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: #000000;
+  margin-right: 1rem;
+}
+
+.nav-link:hover {
+  color: #ff4081;
+}
+
+.card {
+  background-color: #1c1c1c;
+  border: 1px solid #2e2e2e;
+  color: #fff;
+  margin: 10px;
+  width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(255, 64, 129, 0.4);
+}
+
+.btn-primary {
+  background-color: #ff4081;
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e91e63;
+}
+
+.container {
+  padding: 20px;
+}

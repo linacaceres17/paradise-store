@@ -1,0 +1,21 @@
+/* index.css: Estilos globales */
+body {
+  background-color: #111;
+  color: #f2f2f2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  color: #ff4081; /* rosado llamativo */
+}
+
+a {
+  text-decoration: none;
+  color: #ff4081;
+}
+
+a:hover {
+  color: #e91e63;
+}
