@@ -3,6 +3,8 @@ const express = require('express');
 const multer = require('multer');
 const Product = require('../models/Product');
 const router = express.Router();
+const productoController = require('../controllers/productController');
+const { check } = require('express-validator');
 
 // Configuración de Multer para guardar las imágenes
 const storage = multer.diskStorage({
@@ -14,6 +16,23 @@ const storage = multer.diskStorage({
     cb(null, uniqueSuffix + '-' + file.originalname)
   }
 })
+
+router.route('/')
+  .get(productoController.getProductos)
+  .post(
+    [
+      check('nombre').not().isEmpty(),
+      check('precio').isNumeric(),
+      check('descripcion').isLength({ min: 5 })
+    ],
+    productoController.crearProducto
+  );
+
+router.route('/:id')
+  .get(productoController.getProducto)
+  .patch(productoController.actualizarProducto)
+  .delete(productoController.eliminarProducto);
+
 
 const upload = multer({ storage: storage })
 
